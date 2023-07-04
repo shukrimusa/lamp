@@ -20,10 +20,11 @@
                 <li><a href="">Contemporary</a></li>
                 <li><a href="">Affrodable</a></li>
             </ul>
-            <button type="button"><span></span></button>
+            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
         </nav>
         <div class="lamp-container">
-            <img src="images/lamp.jpgd" alt="img" class="lamp">
+            <img src="images/lamp.jpg" alt="img" class="lamp">
+            <img src="images/light.jpg" alt="img" class="light" id="light">
 
         </div>
         <div class="text-container">
@@ -32,9 +33,27 @@
                 collection of modern Lamps in all categories from home use to office use.
             </p>
             <a href="#">Check All Collections</a>
+            <div class="control">
+                <p>04</p>
+                <div class="line">
+                    <span></span>
+                </div>
+                <p>05</p>
+            </div>
+
         </div>
 
     </div>
+
+    <script>
+        var btn = document.getElementById('btn');
+        var light = document.getElementById('light');
+
+        function toggleBtn() {
+            btn.classList.toggle('active')
+            light.classList.toggle('on')
+        }
+    </script>
 </body>
 
 </html>

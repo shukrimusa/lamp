@@ -53,6 +53,7 @@ nav button {
     outline: 0;
     border-radius: 20px;
     cursor: pointer;
+    transition: background 0.5s;
 }
 button span {
     display: block;
@@ -61,6 +62,7 @@ button span {
     background: #999;
     border-radius: 50%;
     margin-left: 3px;
+    transition: background 0.5s, margin-left 0.5s
 }
 
 .lamp-container {
@@ -75,6 +77,15 @@ button span {
     width: 100%;
     
 
+}
+
+.light {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 .text-container {
     max-width: 600px;
@@ -91,8 +102,47 @@ button span {
     background: #00986f;
     padding: 14px 40px;
     color: #fff;
-    display:inline-block
+    display:inline-block;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;;
+}
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
 }
 
+.control .line {
+    width: 250px;
+    height: 4px;
+    background: #000;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+
+.control .line span {
+    width: 50%;
+    height: 8px;
+    border-radius: 4px;
+    background: #00986f;
+    display: block;
+   margin-top: -2px
+   
+}
+
+.active {
+    background: green;
+}
+
+.active span {
+    background : #fff;
+    margin-left: 31px;
+}
+
+.on {
+    opacity: 1;
+}
 
 
